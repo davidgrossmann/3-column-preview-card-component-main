@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+
+    /* fonty */
+    --ff-primary:'Lexend Deca', sans-serif;
+    --ff-titles:'Big Shoulders Display', sans-serif;
+    --fw-primary:400;
+    --fw-titles:700;
+    --fs-primary:.9375rem;
+
+    /* barvy */
+    --clr-primary-orange:hsl(31, 77%, 52%);
+    --clr-primary-cyan-500:hsl(184, 100%, 22%);
+    --clr-primary-cyan-700: hsl(179, 100%, 13%);
+
+    --clr-neutral-white:  hsla(0, 0%, 100%, 0.75);
+    --clr-neutral-gray: hsl(0, 0%, 95%);
+
+    /* mezery */
+
+    --pd-base:1.5rem;
+    --btn-outline: white solid 2px;
+}
+
+body {
+    font-family: var(--ff-primary);
+    font-size: var(--fs-primary);
+    font-weight: var(--fw-primary);
+    background-color: var(--clr-neutral-gray);
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main {
+    padding: 4rem 2rem;
+}
+
+.cards {
+  max-width: 1024px;
+    display: flex;
+    flex-direction: column;
+    border-radius: .5rem;
+    overflow: hidden;
+}
+
+.card {
+    max-width:300px;
+    padding:var(--pd-base) var(--pd-base) 3rem var(--pd-base);
+    color: var(--clr-neutral-white);
+
+
+}
+
+.card img {
+    /* padding-bottom: var(--pd-base); */
+    width: 64px;
+    height: auto;
+}
+
+.card h2 {
+    color:var(--clr-neutral-gray);
+    font-family: var(--ff-titles);
+    font-size: 2rem;
+    text-transform: uppercase;
+    /* padding-bottom: var(--pd-base); */
+
+}
+.card p {
+    padding-bottom: var(--pd-base);
+    line-height: 2;
+    font-size: 1rem;
+}
+
+.button {
+    text-decoration: none;
+    background-color: var(--clr-neutral-gray);
+    padding: .5rem 1.5rem;
+    border-radius: 50px;
+    font-weight: var(--fw-titles);
+    transition: all 300ms ease-in-out;
+    border: 2px solid hsl(0, 0%, 95%);
+    }
+
+.sedans__button {
+    color: var(--clr-primary-orange);
+}
+
+.sedans__button:hover {
+    background-color: var(--clr-primary-orange);
+    color:var(--clr-neutral-gray);
+}
+
+.suvs__button {
+    color:var(--clr-primary-cyan-500);
+}
+
+.suvs__button:hover {
+    background-color: var(--clr-primary-cyan-500);
+    color:var(--clr-neutral-gray);
+}
+
+.luxury__button {
+    color: var(--clr-primary-cyan-700);
+}
+
+.luxury__button:hover {
+    background-color: var(--clr-primary-cyan-700);
+    color:var(--clr-neutral-gray);
+}
+
+.sedans {
+    background-color: var(--clr-primary-orange);
+}
+
+.suvs {
+    background-color: var(--clr-primary-cyan-500);
+}
+
+.luxury {
+    background-color: var(--clr-primary-cyan-700);
+
+}
+
+@media(min-width: 756px) {
+    .cards {
+        flex-direction: row;
+
+    }
+
+    .card {
+      max-width: 260px;
+      
+    }
+
+    .card p {
+      padding-bottom: 4rem;
+    }
+
+
+    }
+
+.attribution { font-size: 11px; text-align: center; margin-top:5rem; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
